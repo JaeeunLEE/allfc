@@ -1,0 +1,381 @@
+  *{ 
+    font-family: 맑은 고딕;
+    font-size: 16px;
+    margin: 0px;
+    padding: 0px;
+  }
+  body{
+    width: 80%;
+    margin: 0px auto;
+    /*background-image: url('/blog_v1jq/menu/images/tile.jpg');*/
+    /*background-color: #FFFF00;*/
+  }
+  img{
+    border: none;
+  
+  }
+  
+  /* 의사 클래스(psedo-class) 를 이용한 CSS 적용 */
+  A:link{ /*방문전 상태*/
+    text-decoration: none;
+    color: #333333;
+  }
+  A:visited{ /*방문후 상태*/
+    text-decoration: none;
+    color: #333333;
+  }
+  A:hover{ /*A태그에 마우스가 올라간 상태*/
+    text-decoration: underline;
+    color: #5555FF;
+  }
+  A:active{ /*A태그를 클릭한 상태*/
+    text-decoration: underline;
+    color: #5555FF;
+  }
+  
+  .bottom{
+    clear: both;
+    margin: 0px auto;
+    text-align: center;
+  }
+  .table{
+    border: solid 1px #999999;
+    border-collapse: collapse;  /*셀 경계선 병합*/
+    margin: 0px auto;
+    width: 100%;
+    
+  }
+ 
+  .th{
+    background-color: #B2EBF4;
+    border: solid 1px #999999;
+  }
+  
+  .td{
+    border: solid 1px #555555;
+    text-align: center;
+  }
+  .td_l{
+    border: solid 1px #555555;
+  }
+  
+  .title{
+    text-align: center;
+    border: solid 1px #AAAAAA;
+    width: 20%;
+    margin: 20px auto;
+    padding: 3px;
+    background-color: #EEEEEE;
+  }
+  .content{
+    width: 80%;
+    border: none;
+    margin: 20px auto;
+    
+  }
+  .message{
+    width: 80%;
+    border: none;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .warning{
+    color: # FFFFFF;
+    background-color: #FF0000;
+    font-weight: bold;
+  }
+  
+   .info{
+    color: # FFFFFF;
+    background-color: #00AA00;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  
+  form ul li{
+   list-style: none; /*블렛 기호 생략*/
+   margin: 10px 10px;
+   
+  }
+  fieldset ul li{
+   list-style: none; /*블렛 기호 생략*/
+   margin: 10px 10px;
+   
+  }
+  form fieldset legend{
+   margin: 0px 10px;
+  }
+  
+  /*
+   <UL>
+    <LI class='center'>
+  */
+  ul li.center{
+    list-style: none; /*블렛 기호 생략*/
+    text-align: center;
+  } 
+  
+  form fieldset ul li.right{
+    list-style: none; /*블렛 기호 생략*/
+    margin: 10px 30px 10px 0px; /*top right bottom left*/
+    text-align: center;
+  } 
+  fieldset.none_line{
+    margin: 0px 10px;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+  } 
+  
+  #top_menu{
+    width: 100%;
+    height: 150px;
+  }
+  .top_menu_label{
+    position: relative; /* 부모 태그인 body태그 기준 */
+    top: 0px;
+    left: 0px;
+    color: #FFFFFF;
+  }
+  .top_menu_list{
+    position: relative;
+    top: 60%;
+    left: 0px;
+    color: #FFFFFF;
+    background-color: rgba(0,0,255,0.2);
+  }
+  .menu_link:link{
+    color: white;
+    text-decoration: none;
+    
+  }
+  
+  /* 의사 클래스(psedo-class) 를 이용한 CSS 적용 */
+  .menu_link:link{ /*방문전 상태*/
+    text-decoration: none;
+    color: white;
+  }
+  .menu_link:visited{ /*방문후 상태*/
+    text-decoration: none;
+    color: white;
+  }
+  .menu_link:hover{ /*A태그에 마우스가 올라간 상태*/
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+  .menu_link:active{ /*A태그를 클릭한 상태*/
+    text-decoration: none;
+    color: white;
+  }
+  
+  .menu_line{
+    width: 100%;
+    border-bottom: solid 1px #AAAAAA;
+    margin: 10px 0px 20px 0px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  @import url(http://fonts.googleapis.com/css?family=Raleway);
+
+#cssmenu{
+  position: absolute;
+
+  top: 0;
+  margin: 0 0 0 0;
+}
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a,
+#cssmenu #menu-button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#cssmenu:after,
+#cssmenu > ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+#cssmenu #menu-button {
+  display: none;
+}
+#cssmenu {
+  width: auto;
+  font-family: Raleway, sans-serif;
+  line-height: 1;
+}
+#cssmenu > ul {
+  background: #3db2e1;
+}
+#cssmenu > ul > li {
+  float: left;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  perspective: 1000px;
+}
+#cssmenu.align-center > ul {
+  font-size: 0;
+  text-align: center;
+}
+#cssmenu.align-center > ul > li {
+  display: inline-block;
+  float: none;
+}
+#cssmenu.align-right > ul > li {
+  float: right;
+}
+#cssmenu > ul > li > a {
+  padding: 16px 20px;
+  font-size: 14px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #3db2e1;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  -webkit-transform-origin: 50% 0;
+  -moz-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+#cssmenu > ul > li.active > a {
+  color: #dff2fa;
+}
+#cssmenu > ul > li:hover > a,
+#cssmenu > ul > li > a:hover {
+  color: #dff2fa;
+  -webkit-transform: rotateX(90deg) translateY(-23px);
+  -moz-transform: rotateX(90deg) translateY(-23px);
+  transform: rotateX(90deg) translateY(-23px);
+  -ms-transform: none;
+}
+#cssmenu > ul > li > a::before {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: -1;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 16px 20px;
+  color: #dff2fa;
+  background: #19799f;
+  content: attr(data-title);
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  transition: background 0.3s;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  -webkit-transform-origin: 50% 0;
+  -moz-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -ms-transform: translateY(- -18px);
+}
+#cssmenu > ul > li:hover > a::before,
+#cssmenu > ul > li > a:hover::before {
+  background: #3db2e1;
+}
+#cssmenu.small-screen {
+  width: 100%;
+}
+#cssmenu.small-screen > ul,
+#cssmenu.small-screen.align-center > ul {
+  width: 100%;
+  text-align: left;
+}
+#cssmenu.small-screen > ul > li,
+#cssmenu.small-screen.align-center {
+  float: none;
+  display: block;
+  border-top: 1px solid rgba(100, 100, 100, 0.1);
+}
+#cssmenu.small-screen > ul > li:hover > a,
+#cssmenu.small-screen > ul > li > a:hover {
+  color: #dff2fa;
+  -webkit-transform: none;
+  -moz-transform: none;
+  transform: none;
+  -ms-transform: none;
+}
+#cssmenu.small-screen > ul > li > a::before {
+  display: none;
+}
+#cssmenu.small-screen #menu-button {
+  display: block;
+  padding: 16px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: #3db2e1;
+}
+#cssmenu.small-screen #menu-button:after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 17px;
+  display: block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border-top: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  width: 22px;
+  height: 3px;
+}
+#cssmenu.small-screen #menu-button.menu-opened:after {
+  border-top: 2px solid #dff2fa;
+  border-bottom: 2px solid #dff2fa;
+}
+#cssmenu.small-screen #menu-button:before {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 27px;
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #ffffff;
+}
+#cssmenu.small-screen #menu-button.menu-opened:before {
+  background: #dff2fa;
+}

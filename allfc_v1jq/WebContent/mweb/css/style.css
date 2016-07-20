@@ -1,0 +1,248 @@
+/* version 1 */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 맑은 고딕, 고딕;
+  font-size: 18px;
+  
+}
+
+header, body, footer {
+  width: 100%;
+}
+
+header {
+  background: purple;
+  width: 100%;
+}
+
+body {
+  margin: auto;
+}
+
+.bottom{
+  padding-bottom: 50px;
+}
+
+footer {
+  text-align: center;
+  position: fixed;  /* 스크롤시 화면에 고정 시킴 */
+  bottom: 0px;    /* 문서 하단부터 태그 하단 좌표까지의 거리 */
+}
+
+/* 공통 스타일 */
+h1 {
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+h2 {
+  color: white;
+}
+
+ /* text-shadow: 4px 4px 7px green: 그림자
+     - 수평 그림자의 위치
+     - 수직 그림자의 위치
+     - 그림자의 흐림 반경
+     - 색깔 */
+h3 {
+  text-align: center;
+  color: white;
+}
+
+img {
+  border: 0;      /* 이미지 외곽선 사용 안함. */
+  padding: 2px; /* 이미지 내부 간격 지정 */
+}
+
+/* 메뉴 구성 시작 */
+nav {
+  margin-bottom: 5px; /* 메뉴 하단 5px 떨어트림 */
+}
+
+nav span a {
+  font-weight: bold;  /* 진하게 강조 */
+  padding: 0px 5px;  /* 위아래 좌우*/
+  border: 1px solid #FFFFFF; /* 외곽선 */
+  background: #55AA55;     /* 배경색 */
+  color: white;                   /* 글자색 */
+  text-decoration: none;     /* 밑줄 생략 */
+}
+
+/* 마우스가 A태그위에 있을때, 스마트폰에서는 의미 없음. */
+nav span a:hover { 
+  background: #00CC00;
+  color: white;
+}
+/* 메뉴 구성 종료 */
+
+.content {
+  margin: 10px auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  clear: both;  /* float 를 이용한 레이어(DIV) 겹침 제거 */
+}
+
+.section1{
+  padding: 5px;
+}
+/* list-style-position: inside;: 이미지 출력 위치, outside: 출력안됨 */
+.section1 ul li {
+  list-style-position: inside;
+  list-style-image: url("li.jpg");
+}
+
+/* mintro.jsp 적용 스타일 
+   em: 태그가 계층적으로 구성되어 있는 경우 부모 태그에 비례해서
+         글자의 크기가 변경됩니다.
+         <DIV style='font-size: 2em'>
+             <DIV style='font-size: 1.5em'>
+                <DIV style='font-size: 1.0em'>
+ */
+#stu-pic {
+  width: 6em;  /* 1em: 16px 기준, 6 X 16 = 96px */
+  height: 8em; /* 8 * 16 = 128px */
+  float: left;     /* Layer로 작동 */
+}
+
+/* minfo.jsp 적용 스타일 */
+#year-table {
+  table-layout: auto;
+  width: 100%;
+  border-collapse: seperate;
+  margin: 0px auto;
+  padding: 1px;
+}
+
+#year-table thead {
+  background: #E4F2D0;
+}
+
+#logo {
+  position: fixed;
+  top: 40%;
+  left: 28%;
+  opacity: 0.3; /* 0: 완전 투명 */
+}
+
+/* mstudy.jsp 적용 스타일 */
+video {
+  margin: 5px;
+  width: 300px;
+  height: 200px;
+}
+
+/* mcareer.jsp 적용 스타일 */
+.semi-pic {
+  width: 90%;
+  margin: 5px auto;
+}
+
+#pic-container {
+  text-align: center;   
+}
+
+#index_menu{
+  width: 80%;          
+  margin: 10px auto;   /* nav 태그 가운데 정렬 */
+}
+
+#index_menu ul{
+  clear: both;           /* 왼쪽 정렬 해제 */
+  width: 100%;
+}
+
+#index_menu ul li{
+  list-style: none;
+  float: left;
+  width: 33%;           /* 하나의 아이콘의 크기 */
+  text-align: center;
+  line-height: 10px;
+}
+
+#index_menu ul li img{
+  width: 100%;
+  height: 100%;
+  border: none; /* A 태그로인한 외곽선 생략 */
+}
+
+/* 의사 클래스(pseudo-class) 를 이용한 CSS 적용 */
+A:link{  /* 방문전 상태 */
+  color: #333333;
+  text-decoration: none; /* 밑줄 삭제 */
+}
+
+A:visited{  /* 방문후 상태 */
+  color: #333333;
+  text-decoration: none; /* 밑줄 삭제 */
+}
+    
+A:hover{  /* A 태그에 마우스가 올라간 상태 */
+  color: #5555FF;
+  text-decoration: underline; /* 밑줄 삭제 */
+}
+  
+A:active{  /* A 태그를 클릭한 상태 */
+  color: #5555FF;
+  text-decoration: underline; /* 밑줄 삭제 */
+ }
+
+/* form input[type=text]: type이 text인 태그만 적용*/
+form input{
+  border-top: none;
+  border-right: none;
+  border-bottom: solid 1px #AAAAAA;
+  border-left: none; 
+  margin-bottom: 3px;  
+  width: 100%;
+}
+
+FORM fieldset{
+  border: none;
+}
+
+  /*
+  <FORM>
+    <FIELDSET>
+      <UL>
+        <LI class='right'>
+  */
+  form fieldset ul li.right{
+    list-style: none; /* 블렛 기호 생략 */
+    margin: 10px 30px 10px 0px; /* top right bottom left */
+    text-align: right;  
+  } 
+
+#footer_menu{
+  width: 96%;          
+  margin: 10px auto;   /* nav 태그 가운데 정렬 */
+}
+
+#footer_menu ul{
+  clear: both;           /* 왼쪽 정렬 해제 */
+  width: 100%;
+}
+
+#footer_menu ul li{
+  list-style: none;
+  float: left;
+  width: 10%;           /* 하나의 아이콘의 크기 */
+  text-align: center;
+  line-height: 10px;
+}
+
+#footer_menu ul li a img{
+  width: 100%;
+  height: 100%;
+  border: none; /* A 태그로인한 외곽선 생략 */
+}
+
+.footer_content {
+  line-height: 40px;
+  background-color: #AAAAAA;
+  text-align: center;
+  position: fixed;  /* 스크롤시 화면에 고정 시킴 */
+  bottom: 0px;    /* 문서 하단부터 태그 하단 좌표까지의 거리 */
+}
